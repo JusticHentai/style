@@ -9,12 +9,15 @@
     "noUnusedLocals": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "jsx":"preserve",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationDir": "dist",
   },
   "include": ["./**/*.ts"],
   "exclude": ["node_modules", "dist"]

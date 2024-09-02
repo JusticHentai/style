@@ -5,7 +5,7 @@
 ## 安装
 
 ```bash
-pnpm i style
+pnpm i @justichentai/style
 ```
 
 ## 使用

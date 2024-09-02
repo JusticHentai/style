@@ -1,7 +1,7 @@
 {
   "name": "@justichentai/style",
   "version": "1.0.0",
-  "description": "工具包模板",
+  "description": "css in js 样式",
   "license": "ISC",
   "author": "justichentai",
   "type": "module",
@@ -13,23 +13,29 @@
     "README.md"
   ],
   "scripts": {
-    "build": "rollup -c rollup.config.js",
+    "build": "tsc && babel src -d dist -x \".ts,.tsx,.js,.jsx\"",
     "prepublish": "pnpm build"
   },
+  "dependencies": {
+    "@justichentai/is": "^1.0.7"
+  },
   "devDependencies": {
+    "@babel/cli": "^7.25.6",
     "@babel/core": "^7.25.2",
-    "@babel/plugin-transform-runtime": "^7.24.7",
-    "@babel/preset-env": "^7.25.3",
-    "@babel/runtime": "^7.25.0",
-    "@rollup/plugin-alias": "^5.1.0",
-    "@rollup/plugin-babel": "^6.0.4",
-    "@rollup/plugin-commonjs": "^26.0.1",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-terser": "^0.4.4",
-    "@rollup/plugin-typescript": "^11.1.6",
-    "core-js": "^3.38.0",
-    "rollup": "^4.20.0",
-    "rollup-plugin-dts": "^6.1.1",
+    "@babel/plugin-transform-runtime": "^7.25.4",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-react": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7",
+    "@babel/runtime": "^7.25.6",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "babel-plugin-styled-components": "^2.1.4",
+    "core-js": "^3.38.1",
+    "styled-components": "^6.1.13",
     "typescript": "^5.5.4"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   }
 }
