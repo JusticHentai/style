@@ -14,7 +14,6 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "jsx":"preserve",
     "declaration": true,
     "emitDeclarationOnly": true,
     "declarationDir": "dist",

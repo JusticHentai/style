@@ -1,51 +1,46 @@
-import styled from 'styled-components'
+import { css } from 'styled-components'
 
-interface ContainerProps {
+export interface ContainerProps {
   type?: 'r' | 'a' | 'f'
   size?: 'x' | 'y' | 'xy' | 'none'
 }
 
-const Container = styled.div<ContainerProps>`
-  position: ${(props) => props.type};
-  width: 100%;
-  height: 100%;
-`
-
-const Container = (props: ContainerProps) => {
+const container = (props: ContainerProps) => {
   const { type = 'r', size = 'x' } = props
 
   const typeMap = {
-    r: styled.div`
+    r: css`
       position: relative;
     `,
-    a: styled.div`
+    a: css`
       position: absolute;
     `,
-    f: styled.div`
+    f: css`
       position: fixed;
     `,
   }
 
   const sizeMap = {
-    x: styled.div`
+    x: css`
       width: 100%;
     `,
-    y: styled.div`
+    y: css`
       height: 100%;
     `,
-    xy: styled.div`
+    xy: css`
       width: 100%;
       height: 100%;
     `,
-    none: styled.div``,
+    none: css``,
   }
 
-  const typeRes = typeMap[type]
-  const sizeRes = sizeMap[size]
+  const typeCss = typeMap[type]
+  const sizeCss = sizeMap[size]
 
-  return styled.div`
-    ${typeRes}
+  return css`
+    ${typeCss}
+    ${sizeCss}
   `
 }
 
-export default Container
+export default container
