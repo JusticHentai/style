@@ -31,6 +31,7 @@
     "typescript": "^5.5.4"
   },
   "peerDependencies": {
+    "@types/react": "^18.3.5",
     "styled-components": "^6.1.13"
   }
 }
