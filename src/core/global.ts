@@ -64,10 +64,11 @@ const global = createGlobalStyle<GlobalProps>`
 
   #${(props) => props.root} {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow-x: hidden;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
   }
 `
 
